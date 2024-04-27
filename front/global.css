@@ -28,6 +28,7 @@ header {
   width: 100%;
   background-color: var(--header-color);
   position: fixed;
+  z-index: 1;
   top: 0;
 }
 

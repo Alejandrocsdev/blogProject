@@ -67,7 +67,6 @@ function createArticle(content) {
   const previewDiv = document.createElement('div')
   previewDiv.id = 'preview'
   previewDiv.textContent = content.preview
-  previewDiv.dataset.id = content.id
   mainDiv.appendChild(previewDiv)
 
   // picture container
@@ -82,7 +81,6 @@ function createArticle(content) {
 
   // redirect event listeners
   titleDiv.addEventListener('click', onClickDetailBtn)
-  previewDiv.addEventListener('click', onClickDetailBtn)
   pictureImg.addEventListener('click', onClickDetailBtn)
 
   return articleDiv
