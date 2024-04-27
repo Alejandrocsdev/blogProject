@@ -1,0 +1,45 @@
+:root {
+  --header-height: 60px;
+  --footer-height: 60px;
+  /* Light Mode */
+  --background-color: hsl(31, 51%, 92%);
+  --header-color: hsl(30, 20%, 80%);
+  --footer-color: hsl(30, 20%, 80%);
+}
+
+/* Dark Mode */
+.dark {
+  --background-color: hsl(211, 100%, 12%);
+  --header-color: hsl(209, 100%, 20%);
+  --footer-color: hsl(239, 94%, 19%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, 'Noto Sans TC', Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  height: var(--header-height);
+  width: 100%;
+  background-color: var(--header-color);
+  position: fixed;
+  top: 0;
+}
+
+main {
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+footer {
+  height: var(--footer-height);
+  background-color: var(--footer-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
