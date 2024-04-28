@@ -4,17 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../public/images/logo.svg" />
   <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="../public/fonts/fonts.css">
   <link rel="stylesheet" href="index.css">
   <title>Articles Web</title>
 </head>
 
-<body>
+<body class="theme">
   <header>
-    <!-- <i class="fa-regular fa-pen-to-square"></i> -->
-    <!-- <i class="fa-regular fa-sun"></i>
-    <i class="fa-solid fa-moon"></i> -->
+    <div id="nav-left">
+      <div id="home">
+        <img src="../public/images/logo.png">
+      </div>
+    </div>
+    <div id="nav-right">
+      <div id="dark-mode">
+        <i class="fa-solid fa-sun theme"></i>
+      </div>
+      <div id="profile">
+        <i class="fa-solid fa-circle-user"></i>
+      </div>
+    </div>
   </header>
   <main>
     <div id="container">
@@ -39,6 +50,7 @@
   <footer>MIT licensed | Copyright &copy; 2024</footer>
   <script src="https://kit.fontawesome.com/6fb9682f78.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../global.js"></script>
   <script src="../utils.js"></script>
   <script src="index.js"></script>
 </body>

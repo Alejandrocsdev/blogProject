@@ -7,7 +7,6 @@
   width: var(--container-width);
   padding: calc(var(--header-height) + 20px) 20px 20px 20px;
   margin: 0 auto;
-  background-color: #a2d2ff;
   display: grid;
   gap: 20px;
   /* CONTENT BOX */
@@ -16,7 +15,7 @@
 
 #article {
   height: var(--article-height);
-  background-color: #0077b6;
+  border: 1px solid gray;
   display: flex;
 }
 
@@ -24,7 +23,8 @@
   height: 100%;
   width: calc(var(--container-width) - var(--article-height));
   padding: 10px;
-  background-color: #ffddd2;
+  background-color: var(--tertiary-background-color);
+  border-right: 1px solid gray;
 }
 
 #info {

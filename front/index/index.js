@@ -22,7 +22,7 @@ function renderArticles(articles) {
   articles.forEach((e) => {
     const id = e.id
     const avatar = e.avatar
-    const username = e.username.length <= 20 ? e.username : e.username.substring(0, 20) + '...'
+    const username = e.username
     const title = e.title.length <= 20 ? e.title : e.title.substring(0, 20) + '...'
     const picture = e.picture
     const preview = e.content.length <= 80 ? e.content : e.content.substring(0, 80) + '...'
