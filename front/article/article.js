@@ -6,9 +6,10 @@ const username = document.getElementById('username')
 const title = document.getElementById('title')
 const content = document.getElementById('content')
 
-
-
 ;(function init() {
+    // set theme base on local storage
+    setTheme()
+
   const urlParams = new URLSearchParams(window.location.search)
   const id = urlParams.get('id')
   axios

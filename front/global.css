@@ -5,6 +5,7 @@
   --primary-background-color: 	hsl(26, 100%, 92%);
   --secondary-background-color: 	hsl(24, 43%, 76%);
   --tertiary-background-color: 	hsl(24, 43%, 90%);
+  --border-color: hsl(0, 0%, 50%);
   --text-color: hsl(0, 0%, 20%);
 }
 
@@ -13,6 +14,7 @@
   --primary-background-color: hsl(0, 0%, 0%);
   --secondary-background-color: 	hsl(221, 51%, 16%);
   --tertiary-background-color: 		hsl(201, 100%, 14%);
+  --border-color: hsl(0, 0%, 50%);
   --text-color: hsl(0, 0%, 80%);
 }
 
@@ -33,6 +35,8 @@ header {
   display: flex;
   position: fixed;
   z-index: 1;
+  top: 0;
+  left: 0;
 }
 
 #nav-left {
@@ -74,6 +78,39 @@ header {
   cursor: pointer;
 }
 
+#sign {
+  margin-right: 10px;
+  font-size: 20px;
+  display: flex;
+}
+
+#sign-in {
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-in:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#sign-up {
+  padding: 5px;
+  background-color: var(--tertiary-background-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#sign-up:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}
+
 main {
   min-height: 100vh;
   background-color: var(--primary-background-color);
@@ -86,4 +123,44 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#modal-bg {
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(0, 0%, 100%, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#modal {
+  width: 380px;
+  height: 400px;
+  background-color: var(--secondary-background-color);
+  border: 3px solid var(--border-color);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal tr {
+  height: 55px;
+}
+
+#modal tr td:nth-child(1) {
+  text-align: center;
+}
+
+#modal-name {
+  margin: 0;
+}
+
+#submit {
+  width: 100%;
 }

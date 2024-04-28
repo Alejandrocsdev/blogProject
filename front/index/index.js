@@ -5,6 +5,9 @@ const container = document.getElementById('container')
 const articles = []
 
 ;(function init() {
+  // set theme base on local storage
+  setTheme()
+
   axios
     .get(INDEX_URL)
     .then((response) => {
@@ -34,19 +37,19 @@ function renderArticles(articles) {
 function createArticle(content) {
   // article container
   const articleDiv = document.createElement('div')
-  articleDiv.id = 'article'
+  articleDiv.classList = 'article'
 
   // main container
   const mainDiv = document.createElement('div')
-  mainDiv.id = 'main'
+  mainDiv.classList = 'main'
   articleDiv.appendChild(mainDiv)
 
   const infoDiv = document.createElement('div')
-  infoDiv.id = 'info'
+  infoDiv.classList = 'info'
   mainDiv.appendChild(infoDiv)
 
   const avatarDiv = document.createElement('div')
-  avatarDiv.id = 'avatar'
+  avatarDiv.classList = 'avatar'
   infoDiv.appendChild(avatarDiv)
 
   const avatarImg = document.createElement('img')
@@ -54,24 +57,24 @@ function createArticle(content) {
   avatarDiv.appendChild(avatarImg)
 
   const usernameDiv = document.createElement('div')
-  usernameDiv.id = 'username'
+  usernameDiv.classList = 'username'
   usernameDiv.textContent = content.username
   infoDiv.appendChild(usernameDiv)
 
   const titleDiv = document.createElement('div')
-  titleDiv.id = 'title'
+  titleDiv.classList = 'title'
   titleDiv.textContent = content.title
   titleDiv.dataset.id = content.id
   mainDiv.appendChild(titleDiv)
 
   const previewDiv = document.createElement('div')
-  previewDiv.id = 'preview'
+  previewDiv.classList = 'preview'
   previewDiv.textContent = content.preview
   mainDiv.appendChild(previewDiv)
 
   // picture container
   const pictureDiv = document.createElement('div')
-  pictureDiv.id = 'picture'
+  pictureDiv.classList = 'picture'
   articleDiv.appendChild(pictureDiv)
 
   const pictureImg = document.createElement('img')
