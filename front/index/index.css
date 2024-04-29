@@ -51,6 +51,8 @@
 
 .title {
   margin-bottom: 5px;
+  color: var(--text-color);
+  text-decoration: none;
   font-size: 22px;
   font-weight: bold;
   display: inline-block;

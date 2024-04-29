@@ -1,4 +1,4 @@
-const ARTICLE_URL = `${BASE_URL}/article`
+const API_URL = `${BASE_URL}/articles`
 
 const avatar = document.querySelector('#avatar img')
 const picture = document.querySelector('#picture img')
@@ -13,7 +13,7 @@ const content = document.getElementById('content')
   const urlParams = new URLSearchParams(window.location.search)
   const id = urlParams.get('id')
   axios
-    .get(`${ARTICLE_URL}/${id}`)
+    .get(`${API_URL}/${id}`)
     .then((response) => {
       const data = response.data
       console.log(data)
@@ -25,6 +25,6 @@ const content = document.getElementById('content')
 
     })
     .catch((error) => {
-      console.error(`Fail to fetch data from ${ARTICLE_URL}`)
+      console.error(`Fail to fetch data from ${API_URL}`)
     })
 })()

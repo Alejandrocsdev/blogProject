@@ -2,9 +2,9 @@
   --header-height: 60px;
   --footer-height: 60px;
   /* Light Mode */
-  --primary-background-color: 	hsl(26, 100%, 92%);
-  --secondary-background-color: 	hsl(24, 43%, 76%);
-  --tertiary-background-color: 	hsl(24, 43%, 90%);
+  --primary-background-color: hsl(26, 100%, 92%);
+  --secondary-background-color: hsl(24, 43%, 76%);
+  --tertiary-background-color: hsl(24, 43%, 90%);
   --border-color: hsl(0, 0%, 50%);
   --text-color: hsl(0, 0%, 20%);
 }
@@ -12,8 +12,8 @@
 /* Dark Mode */
 .dark {
   --primary-background-color: hsl(0, 0%, 0%);
-  --secondary-background-color: 	hsl(221, 51%, 16%);
-  --tertiary-background-color: 		hsl(201, 100%, 14%);
+  --secondary-background-color: hsl(221, 51%, 16%);
+  --tertiary-background-color: hsl(201, 100%, 14%);
   --border-color: hsl(0, 0%, 50%);
   --text-color: hsl(0, 0%, 80%);
 }
@@ -65,10 +65,9 @@ header {
   align-items: center;
 }
 
-#dark-mode,
-#profile {
-  width: 50px;
-  height: 50px;
+#dark-mode {
+  width: 40px;
+  height: 40px;
   font-size: 35px;
   margin-right: 10px;
   color: var(--text-color);
@@ -98,6 +97,7 @@ header {
 
 #sign-up {
   padding: 5px;
+  margin-right: 10px;
   background-color: var(--tertiary-background-color);
   border-radius: 5px;
   display: flex;
@@ -110,6 +110,22 @@ header {
   cursor: pointer;
   filter: brightness(90%);
 }
+
+#profile {
+  width: 40px;
+  height: 40px;
+  font-size: 35px;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* #profile i {
+  width: 40px;
+  height: 40px;
+} */
 
 main {
   min-height: 100vh;
@@ -147,6 +163,22 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+#modal-close {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+#modal-close button {
+  cursor: pointer;
 }
 
 #modal tr {
@@ -163,4 +195,5 @@ footer {
 
 #submit {
   width: 100%;
+  cursor: pointer;
 }
